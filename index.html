@@ -4,38 +4,53 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
     />
+    <!-- Css -->
+    <link rel="stylesheet" href="../bookmark/css/main.css" />
     <title>Bookmark landing page</title>
   </head>
   <body>
     <main>
       <div class="container">
-        <header>
+        <header class="header">
           <div class="wrapper">
             <div class="logo">
-              <img src="../bookmark/img/logo-bookmark.svg" alt="" />
+              <img
+                class="logo"
+                src="../bookmark/img/logo-bookmark.svg"
+                alt=""
+              />
             </div>
             <div class="menu-btn">
               <div class="btn-line"></div>
               <div class="btn-line"></div>
               <div class="btn-line"></div>
             </div>
-
-            <nav>
-              <ul>
-                <li><a href="">Features</a></li>
-                <li><a href="">Pricing</a></li>
-                <li><a href="">Contact</a></li>
-                <li>
-                  <a href=""><button class="login">Login</button></a>
-                </li>
-              </ul>
-            </nav>
           </div>
+          <nav class="menu">
+            <ul class="menu-ul">
+              <li class="menu-item"><a href="#" class="links">Features</a></li>
+              <li class="menu-item"><a href="" class="links">Pricing</a></li>
+              <li class="menu-item"><a href="" class="links">Contact</a></li>
+              <li class="menu-item">
+                <a href=""><button class="login">Login</button></a>
+              </li>
+            </ul>
+            <div class="icons-wrap">
+              <i class="fab fa-facebook-square"></i>
+              <i class="fab fa-twitter"></i>
+            </div>
+          </nav>
         </header>
 
         <section class="hero">
@@ -216,7 +231,7 @@
 
         <section class="contact">
           <p>35,000 + already joined</p>
-          <h1 class="text-red-400">Stay up-to-date with what we're doing</h1>
+          <h1>Stay up-to-date with what we're doing</h1>
 
           <div class="wrapper">
             <label for=""
@@ -227,5 +242,7 @@
         </section>
       </div>
     </main>
+
+    <script src="main.js"></script>
   </body>
 </html>

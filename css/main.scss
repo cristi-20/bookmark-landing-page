@@ -1,0 +1,32 @@
+@import 'config';
+@import "menu";
+@import 'reset';
+
+
+body {
+ font-family: 'Rubik', sans-serif;
+ height:100%;
+ position:relative;
+}
+
+.container {
+    max-width:1300px;
+    margin:0 auto;
+}
+
+.header {
+    .wrapper {
+        display:flex;
+        justify-content: space-between;
+        padding:2rem;
+        
+        &.show {
+            background-color:rgba(39, 45, 77,0.8);
+        }
+    }
+}
+
+
+
+ 
+@import 'media';
