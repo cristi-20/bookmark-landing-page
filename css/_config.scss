@@ -1,17 +1,88 @@
 // Colors
-
+$soft_blue:hsl(231, 69%, 60%);
+$soft_red:hsl(0, 94%, 66%);
+$grayish_blue:hsl(229, 8%, 60%);
+$dark_blue:hsl(229, 31%, 21%);
 
 // Mixins
 @mixin easeOut {
-    transition: 0.3s ease-in-out;
-    -moz-transition:0.3s ease-in-out;
-    -ms-transition:0.3s ease-in-out;
-    -o-transition:0.3s ease-in-out;
-    -webkit-transition:0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+}
+
+@mixin flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+// Buttons 
+.cta-wrap {
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.main-cta {
+  background: $soft_blue;
+  padding: .8rem 1rem;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  @include easeOut();
+  border: 2px solid transparent;
+
+  &:hover {
+    background:white;
+    color:$soft_blue;
+    border:2px solid $soft_blue;
   }
 
-  @mixin flex {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
+}
+
+.secondary-cta {
+  @extend .main-cta;
+  background: #e6e6e6;
+  color: black;
+  margin-left: 1rem;
+
+  &:hover {
+    background:$soft_blue;
+    color:white;
+    
   }
+}
+
+.more-info {
+  @extend .main-cta;
+  padding: .6rem .6rem;
+  margin-top: 2rem;
+  
+}
+
+.install-extension {
+  @extend .main-cta;
+  margin-top: 5rem;
+  @include easeOut();
+
+  &:hover {
+    background:white;
+    color:$soft_blue;
+    border:2px solid $soft_blue;
+  }
+}
+
+.contact-us {
+  @extend .main-cta;
+  background:$soft_red;
+  margin-top: .7rem;
+}
+
+
+  
+  

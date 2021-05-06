@@ -6,11 +6,10 @@ const wrapper = document.querySelector('.wrapper');
 const navItems = document.querySelectorAll('.menu-item');
 
 
+
 // Seti Initial State Of Menu
  let showMenu = false;  
-
 menuBtn.addEventListener('click', toggleMenu);
-
 
 function toggleMenu() {
     if(!showMenu) {
@@ -34,6 +33,4 @@ showMenu = true;
         showMenu = false;
     }
 }
-
-
 

@@ -3,28 +3,256 @@
 @import 'reset';
 
 
+
 body {
  font-family: 'Rubik', sans-serif;
- height:100%;
  position:relative;
 }
 
 .container {
-    max-width:1300px;
+    max-width:1200px;
     margin:0 auto;
 }
 
+// Global Styles
+section {
+    margin-top: 5rem;
+}
+
+h1,h2,h3,p {
+    color:$dark_blue;
+}
+
+img {
+    width:100%;
+}
+
+.hero-text,.features-text,.tab-text,.download-text,.faq-text,.contact-text {
+    line-height: 1.4;
+    text-align: center;
+    padding:1.5rem;
+    
+    h1 {
+        font-size: 1.8rem;   
+    }
+   
+    p {
+        margin-top: 1rem;
+    }
+}
+
+.icons-wrap {
+    width:100%;
+    display:flex;
+    justify-content: center;
+    gap:2rem;
+    margin-top: 2rem;
+    color:white;
+    font-size: 1.5rem;
+}
+
+
+
+// Header
 .header {
     .wrapper {
         display:flex;
         justify-content: space-between;
         padding:2rem;
-        
+
+        .logo {
+            display:flex;
+            align-items: center;
+        }
+
         &.show {
             background-color:rgba(39, 45, 77,0.8);
         }
     }
 }
+
+// Hero
+
+
+// Features
+.features {
+    .features-tabs {
+        padding:2rem;
+
+        .tab-text {
+            margin-top: 1rem;
+        }
+
+        ul {
+            margin-bottom: 3rem;
+
+            li {
+                text-align: center;
+                padding:1rem 0 ;
+                cursor:pointer;
+                position:relative;
+                
+                &:first-child {
+                    border-top:1px solid gray;
+                    border-bottom:1px solid gray;
+                    
+                }
+     
+                &:nth-child(2),&:nth-child(3) {
+                 border-bottom:1px solid gray;
+                }
+
+                &:after {
+                    content:'';
+                    height:4px;
+                    width:5%;
+                    background:$soft_red;
+                    position:absolute;
+                    bottom:0;
+                    left:50%;
+                    transform:translate(-50%, -50%);
+                    visibility: hidden;
+                    @include easeOut;
+                }
+
+                &:hover:after {
+                    visibility: visible;
+                    width:35%;
+
+                }
+            }
+        } 
+
+        .tab2,.tab3 {
+            display:none;
+        }
+    }
+}
+
+// Download
+.download {
+    .browser-cards {
+        @include flex;
+        display:grid;
+        grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
+        place-items: center;
+    }
+    .card {
+        width:100%;
+        @include flex;
+        margin-top: 5rem;
+        background:#e9e8e8;
+        width:75%;
+        padding-top:3rem;
+        border-radius:5px;
+        box-shadow: 0px 1px 4px rgba(0,0,0,0.3);
+
+        .card-text {
+            text-align: center;
+            margin:2rem 0;
+            line-height: 1.7;
+            height:100%;
+        }
+
+        
+    }
+    .card-img {
+        width:80px;
+    }
+}
+
+// FAQ 
+.FAQ {
+       ul {
+           width:100%;
+           @include flex;
+           margin-top: 1rem;
+
+           li {
+            margin-bottom: 1rem;
+            padding-bottom:1rem;
+            border-bottom:1px solid $grayish_blue;
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+            width:85%;
+            color:$dark_blue;
+           
+            i {
+               color:$soft_blue;
+               font-size: 1.2rem;  
+            }
+        }
+       } 
+}
+
+// Contact 
+.contact {
+    background:$soft_blue;
+    
+p {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+   padding:1.5rem 0 1rem 0;
+   color:white;
+   
+}
+
+ h1 {
+   margin-bottom: .5rem; 
+   color:white;
+}
+
+.wrapper {
+    @include flex;
+    width:100%;
+    padding-bottom:3.5rem;
+
+    input,.contact-us {
+        width:300px;
+    }
+
+    input {
+        padding: .8rem 1rem;
+        border-radius:5px;
+
+        &:focus {
+            outline:none;
+            border:1px solid $soft_red;
+            @include easeOut;
+            border-radius:5px;
+        }
+    }   
+}
+}
+// Footer
+.footer {
+    background:$dark_blue;
+    padding:3rem;
+    img {
+        width:150px;
+        margin-bottom: 2rem;
+    }
+
+    .footer-wrapper {
+text-align: center;
+
+ul {
+    text-transform: uppercase;
+
+    li {
+        margin-bottom: 1.5rem;
+        color:$grayish_blue;
+    }
+}
+    }
+    
+}
+    
+   
+    
+
+
 
 
 
