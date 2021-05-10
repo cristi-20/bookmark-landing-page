@@ -6,11 +6,11 @@ $dark_blue:hsl(229, 31%, 21%);
 
 // Mixins
 @mixin easeOut {
-  transition: 0.3s ease-in-out;
-  -moz-transition: 0.3s ease-in-out;
-  -ms-transition: 0.3s ease-in-out;
-  -o-transition: 0.3s ease-in-out;
-  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -ms-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
 }
 
 @mixin flex {
@@ -81,6 +81,12 @@ $dark_blue:hsl(229, 31%, 21%);
   @extend .main-cta;
   background:$soft_red;
   margin-top: .7rem;
+  border:2px solid transparent;
+ 
+  &:hover {
+    color:$soft_red;
+    border:2px solid $soft_red;
+  }
 }
 
 

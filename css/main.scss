@@ -2,19 +2,20 @@
 @import "menu";
 @import 'reset';
 
-
+// Global Styles
 
 body {
  font-family: 'Rubik', sans-serif;
  position:relative;
+ overflow-x: hidden;
 }
 
+
 .container {
-    max-width:1200px;
+    max-width:1300px;
     margin:0 auto;
 }
 
-// Global Styles
 section {
     margin-top: 5rem;
 }
@@ -30,14 +31,15 @@ img {
 .hero-text,.features-text,.tab-text,.download-text,.faq-text,.contact-text {
     line-height: 1.4;
     text-align: center;
-    padding:1.5rem;
+    padding:1.3rem;
     
     h1 {
-        font-size: 1.8rem;   
+        font-size: 1.7rem;   
     }
    
     p {
         margin-top: 1rem;
+        font-size: 1.1rem;
     }
 }
 
@@ -50,8 +52,6 @@ img {
     color:white;
     font-size: 1.5rem;
 }
-
-
 
 // Header
 .header {
@@ -71,61 +71,79 @@ img {
     }
 }
 
-// Hero
-
 
 // Features
 .features {
-    .features-tabs {
-        padding:2rem;
+
+    ul {
+        margin-bottom: 3rem;
+
+        li {
+            text-align: center;
+            padding:.5rem 0 ;
+            cursor:pointer;
+            position:relative;
+            
+
+            &:hover {
+                color:$soft_red;
+                cursor:pointer;
+            }
+            
+            &:first-child {
+                border-top:1px solid gray;
+                border-bottom:1px solid gray;
+                
+            }
+ 
+            &:nth-child(2),&:nth-child(3) {
+             border-bottom:1px solid gray;
+            }
+
+            &:after {
+                content:'';
+                height:4px;
+                width:5%;
+                background:$soft_red;
+                position:absolute;
+                bottom:0;
+                left:50%;
+                transform:translate(-50%, -50%);
+                visibility: hidden;
+                @include easeOut;
+            }
+
+            &:hover:after {
+                visibility: visible;
+                width:35%;
+            }
+
+            &.active {
+                &:after {
+                    visibility: visible;
+                    width:35%;
+                }
+            }
+        }
+    } 
+
+    .tab-content {
+        width:100%;
 
         .tab-text {
             margin-top: 1rem;
+           
         }
 
-        ul {
-            margin-bottom: 3rem;
-
-            li {
-                text-align: center;
-                padding:1rem 0 ;
-                cursor:pointer;
-                position:relative;
-                
-                &:first-child {
-                    border-top:1px solid gray;
-                    border-bottom:1px solid gray;
-                    
-                }
-     
-                &:nth-child(2),&:nth-child(3) {
-                 border-bottom:1px solid gray;
-                }
-
-                &:after {
-                    content:'';
-                    height:4px;
-                    width:5%;
-                    background:$soft_red;
-                    position:absolute;
-                    bottom:0;
-                    left:50%;
-                    transform:translate(-50%, -50%);
-                    visibility: hidden;
-                    @include easeOut;
-                }
-
-                &:hover:after {
-                    visibility: visible;
-                    width:35%;
-
-                }
-            }
-        } 
-
-        .tab2,.tab3 {
-            display:none;
+        [data-tab-content] {
+           display:none;
         }
+       
+        .active[data-tab-content] {
+            display: block;
+            padding:1.5rem;
+        }
+
     }
 }
 
@@ -140,7 +158,7 @@ img {
     .card {
         width:100%;
         @include flex;
-        margin-top: 5rem;
+        margin-top: 2rem;
         background:#e9e8e8;
         width:75%;
         padding-top:3rem;
@@ -166,7 +184,7 @@ img {
        ul {
            width:100%;
            @include flex;
-           margin-top: 1rem;
+           margin-top: 2rem;
 
            li {
             margin-bottom: 1rem;
@@ -189,6 +207,8 @@ img {
 // Contact 
 .contact {
     background:$soft_blue;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
     
 p {
     letter-spacing: 2px;
@@ -215,6 +235,7 @@ p {
     input {
         padding: .8rem 1rem;
         border-radius:5px;
+        border:1px solid transparent;
 
         &:focus {
             outline:none;
@@ -227,8 +248,11 @@ p {
 }
 // Footer
 .footer {
+	margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
     background:$dark_blue;
     padding:3rem;
+  
     img {
         width:150px;
         margin-bottom: 2rem;
@@ -236,6 +260,7 @@ p {
 
     .footer-wrapper {
 text-align: center;
+   width:100%;
 
 ul {
     text-transform: uppercase;
@@ -243,8 +268,17 @@ ul {
     li {
         margin-bottom: 1.5rem;
         color:$grayish_blue;
+
+        &:hover {
+            color:$soft_red;
+            cursor:pointer;
+        }
     }
 }
+    }
+    i:hover {
+        color:$soft_red;
+        cursor: pointer;
     }
     
 }

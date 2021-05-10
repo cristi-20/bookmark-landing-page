@@ -25,11 +25,12 @@
         <header class="header">
           <div class="wrapper">
             <div class="logo">
-              <img
-                class="logo"
-                src="../bookmark/img/logo-bookmark.svg"
-                alt=""
-              />
+              <a href="index.html"
+                ><img
+                  class="logo"
+                  src="../bookmark/img/logo-bookmark.svg"
+                  alt="logo"
+              /></a>
             </div>
             <div class="menu-btn">
               <div class="btn-line"></div>
@@ -93,14 +94,16 @@
               </div>
             </div>
 
-            <div class="features-tabs">
-              <ul>
-                <li class="tab-item-1">Simple Bookmarking</li>
-                <li class="tab-item-2">Speedy Searching</li>
-                <li class="tab-item-3">Easy Sharing</li>
-              </ul>
+            <ul class="tabs">
+              <li data-tab-target="#tab1" class="active tab">
+                Simple Bookmarking
+              </li>
+              <li data-tab-target="#tab2" class="tab">Speedy Searching</li>
+              <li data-tab-target="#tab3" class="tab">Easy Sharing</li>
+            </ul>
 
-              <div class="tab1">
+            <div class="tab-content">
+              <div id="tab1" class="active" data-tab-content>
                 <div class="tab-illustration">
                   <img
                     src="../bookmark/img/illustration-features-tab-1.svg"
@@ -108,19 +111,19 @@
                   />
                 </div>
                 <div class="text-wrap">
-                <div class="tab-text">
-                  <h3>Bookmark in one click</h3>
-                  <p>
-                    Organize your bookmarks however you like. Our simple
-                    drag-and-drop interface gives you complete control over how
-                    you manage your favourite sites.
-                  </p>
-                  <a href="#"><button class="more-info">More Info</button></a>
-                </div>
+                  <div class="tab-text">
+                    <h3>Bookmark in one click</h3>
+                    <p>
+                      Organize your bookmarks however you like. Our simple
+                      drag-and-drop interface gives you complete control over
+                      how you manage your favourite sites.
+                    </p>
+                    <a href="#"><button class="more-info">More Info</button></a>
+                  </div>
                 </div>
               </div>
 
-              <div class="tab2">
+              <div id="tab2" data-tab-content>
                 <div class="tab-illustration">
                   <img
                     src="../bookmark/img/illustration-features-tab-2.svg"
@@ -128,18 +131,19 @@
                   />
                 </div>
                 <div class="text-wrap">
-                <div class="tab-text">
-                  <h3>Intelligent Search</h3>
-                  <p>
-                    Our powerful search feature will help you find saved sites
-                    in no time at all. No need to travel through all of your
-                    bookmarks.
-                  </p>
-                  <a href="#"><button class="more-info">More Info</button></a>
+                  <div class="tab-text">
+                    <h3>Intelligent Search</h3>
+                    <p>
+                      Our powerful search feature will help you find saved sites
+                      in no time at all. No need to travel through all of your
+                      bookmarks.
+                    </p>
+                    <a href="#"><button class="more-info">More Info</button></a>
+                  </div>
                 </div>
               </div>
 
-              <div class="tab3">
+              <div id="tab3" data-tab-content>
                 <div class="tab-illustration">
                   <img
                     src="../bookmark/img/illustration-features-tab-3.svg"
@@ -147,16 +151,16 @@
                   />
                 </div>
                 <div class="text-wrap">
-                <div class="tab-text">
-                  <h3>Share your bookmarks</h3>
-                  <p>
-                    Easily share your bookmarks and collections with others.
-                    Create a shareable link that you can send at the click of a
-                    buttton.
-                  </p>
-                  <a href="#"><button class="more-info">More Info</button></a>
+                  <div class="tab-text">
+                    <h3>Share your bookmarks</h3>
+                    <p>
+                      Easily share your bookmarks and collections with others.
+                      Create a shareable link that you can send at the click of
+                      a buttton.
+                    </p>
+                    <a href="#"><button class="more-info">More Info</button></a>
+                  </div>
                 </div>
-              </div>
               </div>
             </div>
           </div>
@@ -256,11 +260,11 @@
 
         <section class="contact">
           <div class="text-wrap">
-          <div class="contact-text">
-            <p>35,000 + already joined</p>
-            <h1>Stay up-to-date with what we're doing</h1>
+            <div class="contact-text">
+              <p>35,000 + already joined</p>
+              <h1>Stay up-to-date with what we're doing</h1>
+            </div>
           </div>
-        </div>
 
           <div class="wrapper">
             <label for=""
@@ -271,13 +275,15 @@
         </section>
 
         <footer class="footer">
-          <div class="footer-wrapper">
-            <img src="../bookmark/img/logo-footer.svg" alt="" />
-            <ul>
-              <li>features</li>
-              <li>pricing</li>
-              <li>contact</li>
-            </ul>
+          <div class="container">
+            <div class="footer-wrapper">
+              <img src="../bookmark/img/logo-footer.svg" alt="" />
+              <ul>
+                <li>features</li>
+                <li>pricing</li>
+                <li>contact</li>
+              </ul>
+            </div>
             <div class="icons-wrap">
               <i class="fab fa-facebook-square"></i>
               <i class="fab fa-twitter"></i>
