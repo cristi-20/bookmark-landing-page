@@ -53,6 +53,10 @@ img {
     font-size: 1.5rem;
 }
 
+
+
+
+
 // Header
 .header {
     .wrapper {
@@ -137,14 +141,17 @@ img {
 
         [data-tab-content] {
            display:none;
+           opacity:0;
+           @include easeOut;
         }
-       
+
         .active[data-tab-content] {
             display: block;
             padding:1.5rem;
-        }
+           opacity:1;
 
-    }
+        }
+     }
 }
 
 // Download
@@ -186,19 +193,55 @@ img {
            @include flex;
            margin-top: 2rem;
 
+
+           .panel {
+               display:none;
+               transition: max-height 0.2s ease-out;
+               max-height: 0;
+               overflow: hidden;
+               width:85%;
+               margin-bottom: 1rem;
+              
+           }
+
+           .active {
+               color:$soft_red;
+               border-bottom:none;
+           }
+
+           li.active i {
+               transform:rotate(180deg);
+             
+           }
+        
+
            li {
             margin-bottom: 1rem;
-            padding-bottom:1rem;
+            padding:1rem 0;
             border-bottom:1px solid $grayish_blue;
+
             display:flex;
             align-items: center;
             justify-content: space-between;
             width:85%;
             color:$dark_blue;
+            cursor:pointer;
+           
+            &:first-child {
+               border-top:1px solid $grayish_blue;;
+            }
+
+           &:hover {
+               color:$soft_red;
+              i {
+                color:$soft_red;
+              } 
+            }
            
             i {
                color:$soft_blue;
                font-size: 1.2rem;  
+               transition:0.3s ease-in-out;
             }
         }
        } 
@@ -223,10 +266,64 @@ p {
    color:white;
 }
 
-.wrapper {
+.form {
     @include flex;
     width:100%;
     padding-bottom:3.5rem;
+   
+    
+
+    .form-control {
+       display: flex;
+       flex-direction: column;
+       position: relative;
+
+       &.success input {
+ border-color:#2ecc71;
+       }
+
+       &.success i.fa-check-circle {
+           visibility: visible;
+           color:#2ecc71;
+       }
+
+       &.error i.fa-exclamation-circle {
+        visibility: visible;
+        color:$soft_red;
+    }
+
+    &.error small {
+        visibility: visible;
+        color:$soft_red;
+    }
+
+       &.error input {
+        border-color:$soft_red;
+              }
+       
+        label {
+            position: relative;
+
+            i {
+                position: absolute;
+                top: 50%;
+                right:5px;
+              transform: translateY(-50%);
+              visibility: hidden;
+            }
+        }
+
+        small {
+            position: absolute;
+            bottom: -22px;
+            left: 0;
+            visibility: hidden;
+        }
+
+       
+    }
+
+    
 
     input,.contact-us {
         width:300px;

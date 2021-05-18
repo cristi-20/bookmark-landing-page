@@ -365,11 +365,18 @@ img {
 
 .features .tab-content [data-tab-content] {
   display: none;
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -ms-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
 }
 
 .features .tab-content .active[data-tab-content] {
   display: block;
   padding: 1.5rem;
+  opacity: 1;
 }
 
 .download .browser-cards {
@@ -437,9 +444,29 @@ img {
   margin-top: 2rem;
 }
 
+.FAQ ul .panel {
+  display: none;
+  -webkit-transition: max-height 0.2s ease-out;
+  transition: max-height 0.2s ease-out;
+  max-height: 0;
+  overflow: hidden;
+  width: 85%;
+  margin-bottom: 1rem;
+}
+
+.FAQ ul .active {
+  color: #fa5757;
+  border-bottom: none;
+}
+
+.FAQ ul li.active i {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 .FAQ ul li {
   margin-bottom: 1rem;
-  padding-bottom: 1rem;
+  padding: 1rem 0;
   border-bottom: 1px solid #9194a1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -452,11 +479,26 @@ img {
           justify-content: space-between;
   width: 85%;
   color: #252b46;
+  cursor: pointer;
+}
+
+.FAQ ul li:first-child {
+  border-top: 1px solid #9194a1;
+}
+
+.FAQ ul li:hover {
+  color: #fa5757;
+}
+
+.FAQ ul li:hover i {
+  color: #fa5757;
 }
 
 .FAQ ul li i {
   color: #5368df;
   font-size: 1.2rem;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .contact {
@@ -477,7 +519,7 @@ img {
   color: white;
 }
 
-.contact .wrapper {
+.contact .form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -492,17 +534,71 @@ img {
   padding-bottom: 3.5rem;
 }
 
-.contact .wrapper input, .contact .wrapper .contact-us {
+.contact .form .form-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+.contact .form .form-control.success input {
+  border-color: #2ecc71;
+}
+
+.contact .form .form-control.success i.fa-check-circle {
+  visibility: visible;
+  color: #2ecc71;
+}
+
+.contact .form .form-control.error i.fa-exclamation-circle {
+  visibility: visible;
+  color: #fa5757;
+}
+
+.contact .form .form-control.error small {
+  visibility: visible;
+  color: #fa5757;
+}
+
+.contact .form .form-control.error input {
+  border-color: #fa5757;
+}
+
+.contact .form .form-control label {
+  position: relative;
+}
+
+.contact .form .form-control label i {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  visibility: hidden;
+}
+
+.contact .form .form-control small {
+  position: absolute;
+  bottom: -22px;
+  left: 0;
+  visibility: hidden;
+}
+
+.contact .form input, .contact .form .contact-us {
   width: 300px;
 }
 
-.contact .wrapper input {
+.contact .form input {
   padding: .8rem 1rem;
   border-radius: 5px;
   border: 1px solid transparent;
 }
 
-.contact .wrapper input:focus {
+.contact .form input:focus {
   outline: none;
   border: 1px solid #fa5757;
   transition: 0.2s ease-in-out;
@@ -711,7 +807,7 @@ img {
     visibility: visible;
     width: 100%;
   }
-  .contact .wrapper {
+  .contact .form {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -720,7 +816,7 @@ img {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .contact .wrapper .contact-us {
+  .contact .form .contact-us {
     margin: 0;
     width: 120px;
     margin-left: 1rem;

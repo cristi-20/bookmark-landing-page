@@ -40,9 +40,7 @@
           </div>
           <nav class="menu">
             <ul class="menu-ul">
-              <li class="menu-item">
-                <a href="#" class="links">Features</a>
-              </li>
+              <li class="menu-item"><a href="#" class="links">Features</a></li>
               <li class="menu-item"><a href="" class="links">Pricing</a></li>
               <li class="menu-item"><a href="" class="links">Contact</a></li>
               <li class="menu-item">
@@ -50,12 +48,11 @@
               </li>
             </ul>
             <div class="icons-wrap">
-              <i class="fab fa-facebook-square"></i>
-              <i class="fab fa-twitter"></i>
+              <i class="fab fa-facebook-square"></i
+              ><i class="fab fa-twitter"></i>
             </div>
           </nav>
         </header>
-
         <section class="hero">
           <div class="hero-illustration">
             <img src="../bookmark/img/illustration-hero.svg" alt="" />
@@ -71,16 +68,14 @@
                 </p>
               </div>
             </div>
-
             <div class="cta-wrap">
-              <a href="#"><button class="main-cta">Get it on Chrome</button></a>
-              <a href="#"
+              <a href="#"><button class="main-cta">Get it on Chrome</button></a
+              ><a href="#"
                 ><button class="secondary-cta">Get it on Firefox</button></a
               >
             </div>
           </div>
         </section>
-
         <section class="features">
           <div class="features-wrapper">
             <div class="text-wrap">
@@ -93,7 +88,6 @@
                 </p>
               </div>
             </div>
-
             <ul class="tabs">
               <li data-tab-target="#tab1" class="active tab">
                 Simple Bookmarking
@@ -101,7 +95,6 @@
               <li data-tab-target="#tab2" class="tab">Speedy Searching</li>
               <li data-tab-target="#tab3" class="tab">Easy Sharing</li>
             </ul>
-
             <div class="tab-content">
               <div id="tab1" class="active" data-tab-content>
                 <div class="tab-illustration">
@@ -122,7 +115,6 @@
                   </div>
                 </div>
               </div>
-
               <div id="tab2" data-tab-content>
                 <div class="tab-illustration">
                   <img
@@ -142,7 +134,6 @@
                   </div>
                 </div>
               </div>
-
               <div id="tab3" data-tab-content>
                 <div class="tab-illustration">
                   <img
@@ -165,7 +156,6 @@
             </div>
           </div>
         </section>
-
         <section class="download">
           <div class="text-wrap">
             <div class="download-text">
@@ -193,7 +183,6 @@
                 >
               </div>
             </div>
-
             <div class="card">
               <img
                 class="card-img"
@@ -210,7 +199,6 @@
                 >
               </div>
             </div>
-
             <div class="card">
               <img
                 class="card-img"
@@ -229,7 +217,6 @@
             </div>
           </div>
         </section>
-
         <section class="FAQ">
           <div class="text-wrap">
             <div class="faq-text">
@@ -241,39 +228,75 @@
             </div>
           </div>
           <ul>
-            <li>What is Bookmark? <i class="fas fa-chevron-down"></i></li>
+            <li class="accordion">
+              What is Bookmark? <i class="fas fa-chevron-down"></i>
+            </li>
+            <p class="panel">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
+              pariatur, totam dolorum magnam vel, similique adipisci placeat
+              esse doloribus facere laudantium ea doloremque! Quo voluptas
+              commodi optio molestias debitis ipsa.
+            </p>
 
-            <li>
+            <li class="accordion">
               How can I request a new browser?
               <i class="fas fa-chevron-down"></i>
             </li>
-
-            <li>Is there a mobile app? <i class="fas fa-chevron-down"></i></li>
-
-            <li>
-              What about other Chromium browsers?
-              <i class="fas fa-chevron-down"></i>
+            <p class="panel">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
+              pariatur, totam dolorum magnam vel, similique adipisci placeat
+              esse doloribus facere laudantium ea doloremque! Quo voluptas
+              commodi optio molestias debitis ipsa.
+            </p>
+            <li class="accordion">
+              Is there a mobile app?
+              <i class="collapsible fas fa-chevron-down"></i>
             </li>
+            <p class="panel">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
+              pariatur, totam dolorum magnam vel, similique adipisci placeat
+              esse doloribus facere laudantium ea doloremque! Quo voluptas
+              commodi optio molestias debitis ipsa.
+            </p>
+            <li class="accordion">
+              What about other Chromium browsers?
+              <i class="collapsible fas fa-chevron-down"></i>
+            </li>
+            <p class="panel">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
+              pariatur, totam dolorum magnam vel, similique adipisci placeat
+              esse doloribus facere laudantium ea doloremque! Quo voluptas
+              commodi optio molestias debitis ipsa.
+            </p>
             <a href="#"><button class="more-info">More Info</button></a>
           </ul>
         </section>
-
         <section class="contact">
           <div class="text-wrap">
             <div class="contact-text">
-              <p>35,000 + already joined</p>
+              <p>35, 000+already joined</p>
               <h1>Stay up-to-date with what we're doing</h1>
             </div>
           </div>
+          <form class="form" id="form">
+            <div class="form-control">
+              <label for=""
+                ><input
+                  type="email"
+                  id="email"
+                  placeholder="Enter your email address"
+                />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+              </label>
+              <small>Error message</small>
+            </div>
 
-          <div class="wrapper">
-            <label for=""
-              ><input type="email" placeholder="Enter your email address"
-            /></label>
-            <a href=""><button class="contact-us">Contact Us</button></a>
-          </div>
+            <button type="submit" name="submit" class="contact-us">
+              Contact Us
+            </button>
+          </form>
         </section>
-
         <footer class="footer">
           <div class="container">
             <div class="footer-wrapper">
@@ -285,14 +308,13 @@
               </ul>
             </div>
             <div class="icons-wrap">
-              <i class="fab fa-facebook-square"></i>
-              <i class="fab fa-twitter"></i>
+              <i class="fab fa-facebook-square"></i
+              ><i class="fab fa-twitter"></i>
             </div>
           </div>
         </footer>
       </div>
     </main>
-
     <script src="main.js"></script>
   </body>
 </html>
