@@ -19,7 +19,6 @@ function toggleMenu() {
         wrapper.classList.add('show');
         navItems.forEach(item => item.classList.add('show'));
 
-
         // Set menu state
         showMenu = true;
     } else {
